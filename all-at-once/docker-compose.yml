@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    image: all-at-once:latest
+    ports:
+      - "8080:80"
+    environment:
+      - SECRET_KEY=Fusion-the-goats
+    volumes:
+      - ./:/data
+    depends_on:
+      - api
+      - game
+
+  api:
+    build: ./api
+    ports:
+      - "5000:5000"
+
+  game:
+    build: ./game
+    ports:
+      - "8081:80"
