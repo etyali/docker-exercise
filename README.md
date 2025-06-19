@@ -6,4 +6,5 @@ Build the image:
 ```bash
 cd all-at-once
 docker build -t all-at-once:latest .
-docker run -it all-at-once:latest
+```
+and run it :)
